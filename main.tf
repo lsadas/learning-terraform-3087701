@@ -30,7 +30,7 @@ module "blog_vpc" {
     Environment = "dev"
   }
 }
-resource "aws_instance" "blob" {
+resource "aws_instance" "blog" {
   ami           = data.aws_ami.app_ami.id
   instance_type = var.instance_type
   vpc_security_group_ids = [module.blog_sg.security_group_id]
@@ -55,7 +55,7 @@ module "alb" {
       protocol         = "HTTP"
       port             = 80
       target_type      = "instance"
-      target_id        = aws_instance.blob.id
+      target_id        = aws_instance.blog.id
     }
   }
 listeners = {
