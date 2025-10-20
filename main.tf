@@ -49,15 +49,6 @@ module "alb" {
   # Security Group
   security_groups = [module.blog_sg.security_group_id]
   
-
-
-
-  access_logs = {
-    bucket = "my-alb-logs"
-  }
-
-  
-
   target_groups = {
     ex-instance = {
       name_prefix      = "blog-"
