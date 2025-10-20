@@ -61,7 +61,7 @@ module "alb" {
 listeners = {
     tcp = {
       port     = 80
-      protocol = "TCP" # Specify TCP protocol
+      protocol = "HTTP" # Specify TCP protocol
       forward = {
         target_group_key = "ex-instance" # Associate with the TCP target group
       }
