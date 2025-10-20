@@ -1,4 +1,4 @@
-data "aws_ami" "app_ami" {
+/* data "aws_ami" "app_ami" {
   most_recent = true
 
   filter {
@@ -82,4 +82,4 @@ ingress_rules  =  ["http-80-tcp", "https-443-tcp"]
 ingress_cidr_blocks  =  ["0.0.0.0/0"]
 egress_rules  =  ["all-all"]
 egress_cidr_blocks  =  ["0.0.0.0/0"]
-}
+}*/
